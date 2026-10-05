@@ -30,14 +30,13 @@
     width: calc(100 * var(--u)); height: calc(56.25 * var(--u));
     display: grid; grid-template-rows: auto 1fr;
   }
-  /* 상단 전체를 채우는 로고 배너. 높이를 줄인 만큼 위아래만 잘린다 */
-  .banner { width: 100%; height: calc(12 * var(--u)); object-fit: cover; object-position: center 55%; display: block; }
+  /* 상단 전체를 채우는 배너 (로고 + 제목 포함, 2000×296) */
+  .banner { width: 100%; height: auto; display: block; }
   .content {
     min-height: 0;
     padding: calc(3 * var(--u)) calc(5.4 * var(--u)) calc(3.6 * var(--u));
-    display: grid; grid-template-rows: auto 1fr auto; gap: calc(2 * var(--u));
+    display: grid; grid-template-rows: 1fr auto; gap: calc(2 * var(--u));
   }
-  .title { font-size: calc(2 * var(--u)); font-weight: 700; letter-spacing: -0.03em; color: var(--n900); }
 
   main { display: flex; flex-direction: column; justify-content: center; min-height: 0; }
   .pill {
@@ -84,9 +83,8 @@
 </head>
 <body>
 <div class="stage" id="stage">
-  <img class="banner" src="logo.jpg" alt="algocare">
+  <img class="banner" src="logo.jpg" alt="algocare 유저들의 감사한 후기">
   <div class="content">
-  <div class="title">알고케어 유저의 감사한 후기</div>
   <main class="swap">
     <div class="pill" id="pill" hidden>고객 제안</div>
     <p class="quote" id="quote"></p>
